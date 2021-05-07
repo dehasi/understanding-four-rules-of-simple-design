@@ -3,6 +3,11 @@
 # this class represents the world og Conway game of life
 class Location
   attr_reader :x, :y
+
+  def neighbors
+    # calculate a list of locations
+    # that are considered neighbours
+  end
 end
 
 class World
