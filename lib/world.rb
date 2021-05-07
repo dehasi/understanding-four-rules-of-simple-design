@@ -43,18 +43,18 @@ class Cell
   end
 end
 
-class LivingCell
+class LivingCellRules
   attr_reader :location
 
-  def stays_alive?
+  def stays_alive?(number_of_neighbours)
     number_of_neighbours == 2 || number_of_neighbours == 3
   end
 end
 
-class DeadCell
+class DeadCellRules
   attr_reader :location
 
-  def comes_to_life?
+  def comes_to_life?(number_of_neighbours)
     number_of_neighbours == 3
   end
 end
