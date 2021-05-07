@@ -8,6 +8,18 @@ class Location
     # calculate a list of locations
     # that are considered neighbours
   end
+
+  def equals?(other_location, if_equal)
+    other_location.equals_coordinate?(self.x, self.y, if_equal)
+    nil
+  end
+
+  def equals_coordinate?(other_x, other_y, if_equal)
+    if self.x == other_x && self.y == other_y
+      if_equal.call
+    end
+    nil
+  end
 end
 
 class World
