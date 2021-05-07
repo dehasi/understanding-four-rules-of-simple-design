@@ -24,7 +24,7 @@ class Ch2Test < Test::Unit::TestCase
 
   def test_after_adding_a_cell_the_world_is_not_empty
     world = World.new
-    location = Location.random
+    location = Coordinate.random
 
     world.set_living_at(location)
 
