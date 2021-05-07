@@ -3,7 +3,7 @@ require 'test/unit'
 class Ch2Test < Test::Unit::TestCase
 
   def test_an_empty_world_stays_empty_after_a_tick
-    world = World.new
+    world = World.empty
 
     next_world = world.tick
 
