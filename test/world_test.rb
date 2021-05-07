@@ -16,9 +16,8 @@ class Ch2Test < Test::Unit::TestCase
 
   def test_a_cell_can_be_added_to_the_world
     world = World.new
-    location = Location.random
 
-    world.set_living_at(location)
+    world.set_living_at(double(:location_of_cell))
 
     assert_true world.alive_at?(location)
   end
