@@ -45,8 +45,24 @@ end
 
 class LivingCell
   attr_reader :location
+
+  def stays_alive?
+    number_of_neighbours == 2 || number_of_neighbours == 3
+  end
 end
 
 class DeadCell
   attr_reader :location
+
+  def comes_to_life?
+    number_of_neighbours == 3
+  end
+end
+
+class ZombieCell
+  attr_reader :location
+
+  def alive_in_next_generation?
+    # some other rules
+  end
 end
